@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Sat Manager</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+            <img src="assets\img\logo2.png" alt="..." width="200" height="50" >
+            </div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="IngresoReparaciones.html">
+                        <i class="ti-settings"></i>
+                        <p>Reparaciones</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="ListadoReparaciones.html">
+                        <i class="ti-list-ol"></i>
+                        <p>Listado</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Ingreso de Reparaciones</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-user"></i>
+                                 
+									<p>Administrador</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Configurar</a></li>
+                                <li><a href="#">Cerrar Sesión</a></li>
+                              </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group"> 
+                        </div>
+                    </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>Fecha</label>
+                                <input type="text" class="form-control border-input"  value="03-04-18">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="tecnicoseleccion">Técnico</label>
+                                <select class="form-control border-input" id="tecnicoseleccion">
+                                    <option>Jonathan Cortes</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                  
+                    <div class="col-md-offset-2 col-md-6">
+                        <div class="form-group">
+                            <label>Cliente</label>
+                            <input type="text" class="form-control border-input"  value="" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="col-md-1 " >
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <btn class="btn btn-sm btn-success btn-icon" style="left:inherit" data-toggle="modal" data-target="#exampleModal" >
+                            <i class="fa fa-plus"></i>
+                        </btn>
+                    </div>
+                    <div class="col-md-1 ">
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <btn class="btn btn-sm btn-success btn-icon" data-toggle="modal" data-target="#modalbuscarcliente">
+                            <i class="fa fa-search"></i>
+                        </btn>
+                    </div>
+                    <!-- MODAL INGRESO DE CLIENTE-->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title tr-color" id="exampleModalLabel">Agregar Cliente</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Nombre</label>
+                                                <input type="text" class="form-control border-input" value="" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        
+                                        <div class="col-md-offset-2 col-md-8">
+                                            <div class="form-group">
+                                                <label>Dirección</label>
+                                                <input type="text" class="form-control border-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Teléfono</label>
+                                                <input type="text" class="form-control border-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Celular</label>
+                                                <input type="text" class="form-control border-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Correo electrónico</label>
+                                                <input type="text" class="form-control border-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Observaciones</label>
+                                                <textarea rows="3" class="form-control border-input">
+                                                                                 </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Aceptar</button>
+                                    
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal BUSCAR CLIENTE-->
+                            <div class="modal fade bd-example-modal-lg" id="modalbuscarcliente" tabindex="-1" role="dialog" aria-labelledby="modalbuscarclienteLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title tr-color" id="modalbuscarclienteLabel">Lista selección de Clientes</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-offset-2 col-md-2">
+                                                    <div class="form-group vertical-centered-text">
+                                                        <label >Búsqueda</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control border-input" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    
+                                                    <btn class="btn btn-sm btn-success btn-icon" >
+                                                        <i class="fa fa-search"></i>
+                                                    </btn>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                    <table class="table">
+                                                        <thead class="tablaheadbuscar">
+                                                            <tr class="tr-color">
+                                                                <th scope="col">Nombre</th>
+                                                                <th scope="col">Dirección</th>
+                                                                <th scope="col">Celular</th> 
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">Jonathan</th>
+                                                                <td>Comalle, Teno </td>
+                                                                <td>+569898887</td> 
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Terminado</td>
+                                                                <td>Jacob</td> 
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>Entregado</td>
+                                                                <td>Larry</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Aceptar</button>
+                            
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FIN DEL MODAL -->
+
+            </div> 
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <input type="text" class="form-control border-input"  value="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-3">
+                    <div class="form-group">
+                        <label>Número de Serie</label>
+                        <input type="text" class="form-control border-input" value="15803-04854" readonly="readonly">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="tecnicoseleccion">Tipo de Equipo</label>
+                        <select class="form-control border-input" id="tecnicoseleccion">
+                            <option>Notebook</option>
+                            <option>Impresora</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <label >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <btn class="btn btn-sm btn-success btn-icon" data-toggle="modal" data-target="#exampleModal1">
+                        <i class="fa fa-plus"></i>
+                    </btn> 
+                </div>
+                <!-- MODAL INGRESO TIPO EQUIPO-->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title tr-color" id="exampleModalLabel">Agregar Equipo</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Tipo de equipo</label>
+                                            <input type="text" class="form-control border-input" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Aceptar</button>
+                
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-3">
+                    <div class="form-group">
+                        <label>Marca</label>
+                        <select class="form-control border-input" id="#">
+                            <option>Dell</option>
+                            <option>HP</option>
+                            <option>Samsung</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                   
+                <div class="col-md-1">
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <btn class="btn btn-sm btn-success btn-icon"  data-toggle="modal" data-target="#IngresoMarca">
+                        <i class="fa fa-plus"></i>
+                    </btn>
+                </div>
+                    <!-- MODAL INGRESO MARCA -->
+                    <div class="modal fade" id="IngresoMarca" tabindex="-1" role="dialog" aria-labelledby="IngresoMarcaLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title tr-color" id="IngresoMarcaLabel">Agregar Marca</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Marca</label>
+                                                <input type="text" class="form-control border-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Aceptar</button>
+                    
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="tecnicoseleccion">Modelo</label>
+                        <select class="form-control border-input" id="tecnicoseleccion">
+                            <option>5000 series</option>
+                            <option>Impresora</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <btn class="btn btn-sm btn-success btn-icon" data-toggle="modal" data-target="#exampleModal2">
+                        <i class="fa fa-plus"></i>
+                    </btn>
+                </div>
+                <!-- MODAL INGRESO TIPO MODELO-->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title tr-color" id="exampleModalLabel">Agregar Modelo</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Modelo</label>
+                                            <input type="text" class="form-control border-input" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-7">
+                                        <div class="form-group">
+                                            <label for="tecnicoseleccion">Marca</label>
+                                            <select class="form-control border-input" id="tecnicoseleccion">
+                                                <option>5000 series</option>
+                                                <option>Impresora</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <btn class="btn btn-sm btn-success btn-icon">
+                                            <i class="fa fa-plus"></i>
+                                        </btn>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-7">
+                                        <div class="form-group">
+                                            <label for="tecnicoseleccion">Tipo de Equipo</label>
+                                            <select class="form-control border-input" id="tecnicoseleccion">
+                                                <option>5000 series</option>
+                                                <option>Impresora</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <btn class="btn btn-sm btn-success btn-icon">
+                                            <i class="fa fa-plus"></i>
+                                        </btn>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Aceptar</button>
+                
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="form-group">
+                        <label>Accesorios</label>
+                        <textarea rows="2" class="form-control border-input">
+                     </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="form-group">
+                        <label>Falla del Equipo</label>
+                        <textarea rows="4" class="form-control border-input">
+                                 </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                     <button type="button" class="btn btn-primary ">Aceptar</button>
+                    <button type="button" class="btn btn-danger ">Cancelar</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+	<script src="assets/js/paper-dashboard.js"></script>
+	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+</html>
